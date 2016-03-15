@@ -1,5 +1,7 @@
 # deadbeef
 
+[![Build Status](https://travis-ci.org/zardus/deadbeef.svg?branch=master)](https://travis-ci.org/zardus/deadbeef)
+
 The most important part of much important work is coming up with clever hex-encoded constants to put into your code, protocols, and exploits.
 This module attempts to address a shocking lack of diversity constant of these constants and hopes to ignite a renaissance in hex constants around the world.
 

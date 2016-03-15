@@ -101,8 +101,12 @@ class DEADBEEF(object):
         :param n: the number of words to skip (if None, a random value between 0 and 4000)
         """
 
-        for _ in zip(xrange(random.randint(0, 4000) if n is None else n), self._normal_words()):
-            pass
+        try:
+            for _ in zip(xrange(random.randint(0, 4000) if n is None else n), self._normal_words()): pass
+        except NameError:
+            # why the fuck would you do this to your own language?
+            for _ in zip(range(random.randint(0, 4000) if n is None else n), self._normal_words()): pass
+
 
     def candidate_count(self):
         """

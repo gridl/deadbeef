@@ -30,9 +30,17 @@ def test_skip():
     # just test if it doesn't except out for now
     deadbeef.skip()
 
+def test_fail():
+    try:
+        deadbeef.get_string(10000)
+        assert False
+    except deadbeef.BADC0DE:
+        assert True
+
 if __name__ == '__main__':
     test_count()
     test_string()
     test_int()
     test_filters()
     test_skip()
+    test_fail()

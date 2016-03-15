@@ -29,6 +29,12 @@ print deadbeef.get_int(postfilter=lambda w: int(w, 16) % 2 == 0)
 
 # get some hexspeak that has at least 7 different letters pre-conversion
 print deadbeef.get_int(prefilter=lambda w: len(set(w)) >= 7)
+
+# when a string can't be found, the BADC0DE exception is raised
+try:
+	print deadbeef.get_string(100000)
+except deadbeef.BADC0DE:
+	print "no can do"
 ```
 
 ## Replacements
